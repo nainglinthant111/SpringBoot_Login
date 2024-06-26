@@ -1,0 +1,4 @@
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50%" cy="42%" r="50%" fill="black" />
+  <text x="50%" y="50%" font-size="25" fill="white" text-anchor="middle" alignment-baseline="middle">N</text>
+</svg>

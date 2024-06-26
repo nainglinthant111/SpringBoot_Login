@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.error {
+  border-color: rgb(244, 14, 14);
+}
+.card {
+  height: 300px;
+  border: none;
+}
+
+.sidebar ul {
+  list-style: none;
+  position: relative;
+}
+.sidebar ul li {
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(251, 235, 5);
+}
+.sidebar ul li:hover {
+  color: blue;
+}
+.sidebar ul li:focus {
+  color: blue;
+}
+
+.chevron-right {
+  position: absolute;
+  width: 25px;
+  height: 30px;
+  right: 10px;
+}
+.title-Link {
+  margin-top: 20px;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+}

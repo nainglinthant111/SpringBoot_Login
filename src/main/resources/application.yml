@@ -1,0 +1,21 @@
+spring:
+  data:
+    mongodb:
+      uri: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: XXXXXXXXXXX@gmail.com
+    password: xxxxxxxxxxxxxx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 1800
+
