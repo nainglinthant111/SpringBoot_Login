@@ -1,24 +1,19 @@
 package com.Game.Multi.common;
 
-import java.io.IOException;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.Game.Multi.model.User;
 import com.Game.Multi.reporisity.UserRepo;
 import com.Game.Multi.service.EmailServices;
-import com.Game.Multi.service.S3Service;
 import com.Game.Multi.service.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -33,8 +28,8 @@ public class commonRestController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private S3Service s3Service;
+    // @Autowired
+    // private S3Service s3Service;
 
     @RequestMapping(value = "/confirmAlready/{email}", method = RequestMethod.GET)
     public String getBook(@PathVariable String email) {
@@ -69,14 +64,14 @@ public class commonRestController {
         }
     }
 
-     @PostMapping("/upload")
-    public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
-        try {
-            String url = s3Service.uploadFile(file);
-            return ResponseEntity.ok(url);
-        } catch (IOException e) {
-            return ResponseEntity.status(500).body("File upload failed: " + e.getMessage());
-        }
-    }
+    //  @PostMapping("/upload")
+    // public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
+    //     try {
+    //         String url = s3Service.uploadFile(file);
+    //         return ResponseEntity.ok(url);
+    //     } catch (IOException e) {
+    //         return ResponseEntity.status(500).body("File upload failed: " + e.getMessage());
+    //     }
+    // }
 
 }
